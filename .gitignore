@@ -1,0 +1,18 @@
+# Private configuration (passwords, production URL)
+/app/config.local.php
+
+# Runtime data — never commit user data, sessions or logs
+/storage/database/*
+/storage/logs/*
+/storage/sessions/*
+/storage/cache/*
+!/storage/**/.gitkeep
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Packaged releases (the downloadable zip)
+/dist/
