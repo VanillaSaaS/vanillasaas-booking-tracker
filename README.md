@@ -2,7 +2,7 @@
 
 An example app built on VanillaSaaS Core: a booking tracker for someone who works for themselves. Clients, appointments, and a dashboard with three numbers.
 
-Run it with one command. It contains VanillaSaaS Core 1.0.0, so there is nothing else to download.
+Run it with one command. It contains VanillaSaaS Core 1.0.1, so there is nothing else to download.
 
 It exists for two reasons: to show what Core looks like with a real feature on top, and to prove that you can add one without editing Core. Read it, run it, or start your own app from it. Core and this example are both free and open source under the MIT licence. `README-CORE.md` is Core's own README, unchanged.
 
@@ -20,15 +20,15 @@ The SQLite database is created in `storage/database/` on the first visit. Email 
 
 Nothing in `app/lib/` or `app/bootstrap.php` was edited. Everything below is in files Core leaves to you.
 
-| What | Where |
-|---|---|
-| Clients and appointments tables | `database/migrations/{sqlite,mysql}/app-001-bookings.sql` |
-| Booking functions (queries, validation, money and date converters) | `app/custom/bookings.php` |
-| Four pages | `public/clients.php`, `client-edit.php`, `appointments.php`, `appointment-edit.php` |
-| Templates | `app/views/pages/` (4 new, dashboard and home rewritten), `app/views/partials/` (3 new) |
-| Sidebar links and icons | `app/views/layouts/app.php` |
-| Settings: app name, timezone | `app/config.php` |
-| A few styles | section 8 at the end of `public/assets/css/app.css` |
+| What                                                               | Where                                                                                   |
+| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
+| Clients and appointments tables                                    | `database/migrations/{sqlite,mysql}/app-001-bookings.sql`                               |
+| Booking functions (queries, validation, money and date converters) | `app/custom/bookings.php`                                                               |
+| Four pages                                                         | `public/clients.php`, `client-edit.php`, `appointments.php`, `appointment-edit.php`     |
+| Templates                                                          | `app/views/pages/` (4 new, dashboard and home rewritten), `app/views/partials/` (3 new) |
+| Sidebar links and icons                                            | `app/views/layouts/app.php`                                                             |
+| Settings: app name, timezone                                       | `app/config.php`                                                                        |
+| A few styles                                                       | section 8 at the end of `public/assets/css/app.css`                                     |
 
 The pattern behind it (a table with `user_id`, functions that always filter by it, a page that guards, validates, saves and redirects) is walked through in Core's docs at <https://vanillasaas.dev/docs/build-a-feature>.
 
@@ -77,6 +77,7 @@ For showing your own app to a prospective client, or running a demo like the one
    ```
 
    The PHP path varies by host; cPanel shows the right one on the Cron Jobs page.
+
 7. **Check the private folders are private.** Each must give 403 or 404:
    - `/app/config.php`
    - `/storage/database/app.sqlite`
