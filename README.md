@@ -2,7 +2,7 @@
 
 An example app built on VanillaSaaS Core: a booking tracker for someone who works for themselves. Clients, appointments, and a dashboard with three numbers.
 
-Run it with one command. It contains VanillaSaaS Core 1.0.1, so there is nothing else to download.
+Run it with one command. It contains VanillaSaaS Core 1.0.2, so there is nothing else to download.
 
 It exists for two reasons: to show what Core looks like with a real feature on top, and to prove that you can add one without editing Core. Read it, run it, or start your own app from it. Core and this example are both free and open source under the MIT licence. `README-CORE.md` is Core's own README, unchanged.
 
